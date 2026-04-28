@@ -6,16 +6,16 @@ import styles from './index.module.css';
 
 const highlights = [
   {
-    title: '技术博客',
-    description: '沉淀项目复盘、工程实践、源码阅读和学习过程。'
+    title: 'AI Agent',
+    description: '记录 Agent workflow、多智能体系统、工具调用和工程化实践。'
   },
   {
-    title: '知识笔记',
-    description: '把零散知识整理成可持续更新的体系。'
+    title: '项目复盘',
+    description: '沉淀开源贡献、论文复现、评测分析和 bad case 归因。'
   },
   {
-    title: '个人项目',
-    description: '展示正在构建、实验和迭代的作品。'
+    title: '学习笔记',
+    description: '整理 Python 后端、RAG、MCP、LangGraph、系统基础等内容。'
   }
 ];
 
@@ -41,7 +41,9 @@ export default function Home() {
               黄振华
             </Heading>
             <p className={styles.subtitle}>
-              这里记录技术学习、工程实践、项目复盘，以及持续成长的轨迹。
+              北邮计算机硕士拟入学，关注 AI Agent、Multi-Agent Systems、Agent Evaluation 与 LLM 应用工程化。
+
+              这里记录我的开源贡献、项目复盘、工程实践和学习笔记。
             </p>
             <div className={styles.actions}>
               <Link className={clsx('button button--primary button--lg', styles.action)} to="/blog">
