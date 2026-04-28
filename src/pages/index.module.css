@@ -1,0 +1,85 @@
+.hero {
+  padding: 7rem 0 5rem;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(20, 83, 45, 0.82)),
+    url('/img/hero-pattern.svg');
+  background-size: cover;
+  color: #fff;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #a7f3d0;
+}
+
+.title {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.subtitle {
+  max-width: 680px;
+  margin: 1.25rem 0 0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.action {
+  min-width: 120px;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.highlight {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1.4rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.highlight h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.25rem;
+}
+
+.highlight p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 5rem 0 4rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
