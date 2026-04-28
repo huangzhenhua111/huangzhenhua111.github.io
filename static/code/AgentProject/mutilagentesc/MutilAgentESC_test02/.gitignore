@@ -1,0 +1,37 @@
+# Environment
+.env
+__pycache__/
+
+# Claude memory
+.claude/
+claude_memory/
+
+# Data
+dataset/
+
+# Outputs
+results.json
+results_backup.json
+source_results.json
+source_eval_output.txt
+source_eval_report.md
+
+# Generated data
+embeddings.txt
+
+# Baseline scripts (not part of reproduction)
+run_source_baseline.py
+
+# Source reference (not part of this reproduction)
+MultiAgentESC_source/
+*.pdf
+*MeshGraph*.md
+*claude的instruction*.md
+
+# Debug / dev scripts
+debug_single_turn.py
+driver.py
+inner_workflow.py
+outer_process.py
+three_agent_strategy_discussion.py
+*instruction*.md

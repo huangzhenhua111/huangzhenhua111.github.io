@@ -7,3 +7,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Large generated artifacts
+static/code/AgentProject/mutilagentesc/**/embeddings.txt
