@@ -11,7 +11,8 @@
 ## Quick Start
 
 #### 这里说明用法，完整示例见:
-huangzhenhua111.github.io/static/code/AgentProject/checkpoint/test/test17_run.py和test17_resume.py
+huangzhenhua111.github.io/static/code/AgentProject/checkpoint/test/test17_run.py和test17_resume.py(粒度为node版)
+test18_run.py和test18_resume.py(粒度为graph版)
 
 ### 第一次跑代码用的文件：
 ```
@@ -25,7 +26,7 @@ g.build()
 
 *这三行是第一次run的时候保存用的：
 storage=FileCheckpointStorage(str(Path(__file__).parent))
-manager=CheckpointManager(g,storage)
+manager=CheckpointManager(g,storage,"node"或者"graph")
 manager.attach_hooks()
 
 out,_=g.invoke({"count":0})
@@ -43,7 +44,7 @@ g.build()
 
 *这五行是接着上次保存的checkpoint文件状态接着跑，同时也会继续保存，第二次还断了可以接着用这些代码
 storage=FileCheckpointStorage(str(Path(__file__).parent))
-manager=CheckpointManager(g,storage)
+manager=CheckpointManager(g,storage,"node"或者"graph")
 manager.attach_hooks()
 manager.load_last()
 out,_=manager.resume()
@@ -238,8 +239,31 @@ out,_=manager.resume()
     b.原来是之前的resume只跑了第一层的
     c.得改成递归版
 
+
 32.再跑test17
 
     a.测试通过了
     b.让codex再跑一些其他测试
     c.ok都过了，开始提pr
+
+
+33.再核对一下需求
+
+    a.发现要求的时间粒度还没实现
+    b.把pr关了先
+
+
+34.改挂勾子的时机来控制时间粒度
+
+
+35.写test18测试
+
+    a.测试通过
+    b.__init__导出一下
+    c.开始pr
+
+
+### 后续还可以改进的地方
+
+    对MCP等实现
+    checkpoint文件里面的边命名可以用sender和receiver
