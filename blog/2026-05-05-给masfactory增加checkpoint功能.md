@@ -184,15 +184,21 @@ out,_=manager.resume()
         Ⅰ.补FileSystemRetriever和各种子类的get,load方法
         Ⅱ.把命名变严格
     d.这一步发现了一个bug：(想要验证这个问题可以跑我的test_openai.py)
+        
         原文本：
+        ```
             {"role": "assistant", "content": "{\"count\": \"1\"}"}
+        ```
+
         经过OpenAIModel转换后：
+        ```
             {
                 "role": "assistant",
                 "content": [
                     {"type": "input_text", "text": "{\"count\": \"1\"}"}
                 ]
             }
+        ```
         openai对上下文的预期输入是 user对input_text ；assistant对output_text
         但是openai看到 assistant对上的是input_text ，直接报错
     
